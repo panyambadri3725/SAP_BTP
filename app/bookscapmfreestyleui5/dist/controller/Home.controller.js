@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(o){"use strict";return o.extend("bookscapmfreestyleui5.controller.Home",{onBooksLibrary:function(){this.getOwnerComponent().getRouter().navTo("RouteView1")},onLogin:function(){sap.m.MessageToast.show("Login clicked")},onSignup:function(){sap.m.MessageToast.show("Signup clicked")},onContact:function(){sap.m.MessageToast.show("Contact Us clicked")}})});
+//# sourceMappingURL=Home.controller.js.map

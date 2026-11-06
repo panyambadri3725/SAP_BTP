@@ -1,0 +1,106 @@
+<mvc:View controllerName="bookscapmfreestyleui5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <core:Fragment fragmentName="bookscapmfreestyleui5.fragments.Header" type="XML"/>
+    <Link width="30px" />
+    <Link text="Home" press="_backHome" />
+  <VBox>
+  <HBox>
+    <Button  text="Create New Records" press="_CreateNewRecord"></Button>
+    <Button  text="Update Record" press="UpdateExistingRecord"></Button>
+    <Button  text="Delete Record" press="DeleteExistingRecord"></Button>
+     <Button  text="Batch Update" press="_batchUpdate"></Button>
+     </HBox>
+     <HBox>
+    <Button  text="Create with a Fragment" press="_createFragment"></Button>
+    <Button text="HeaderItemCrud" press="_headerItemCrud" />
+    <Input id="idBooksVH"  showValueHelp="true" valueHelpRequest="_onBookValueHelp" />
+    <Button icon="sap-icon://refresh" press="_resetBooksTable"></Button>
+    </HBox>
+    </VBox>
+
+
+
+        <Table id="idBooksTable" items="{bk>/BooksSet}" mode="SingleSelectLeft" selectionChange="_showChapters">
+            <columns>
+                <Column>
+                    <Text text="Title" />
+                </Column>
+                <Column>
+                    <Text text="Author" />
+                </Column>
+                <Column>
+                    <Text text="Price" />
+                </Column>
+                <Column>
+                    <Text text=" Discounted Price" />
+                </Column>
+                <Column>
+                    <Text text="Date of Publish" />
+                </Column>
+                <Column>
+                    <Text text="Author Gender" />
+                </Column>
+                <Column>
+                    <Text text="Book suitable for" />
+                </Column>
+                <Column>
+                    <Text text="Status" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem type="Navigation" press="onItemPress">
+                    <cells>
+                        <Text text="{bk>title}" />
+                        <Text text="{bk>author}" />
+                        <Text text="{path: 'bk>price', formatter: '.formatter.formatprice'}"></Text>
+                      <!-- <ObjectStatus text="{=${bk>price} &gt; 15 ? ${bk>price}-5 : ${bk>price} }" state="{=${bk>price} &gt; 15? 'Success' : 'Error'}"  -->
+                       <!-- inverted="true" /> -->
+
+                       <ObjectStatus
+                        text="{parts:[{path:'bk>price'},{path:'bk>ageGroup'}],formatter:'.formatter.priceBand'}"
+                        state="{parts:[{path:'bk>price'},{path:'bk>ageGroup'}],formatter:'.formatter.priceBandColor'}"
+                        inverted="true"
+                        />
+
+                        <Text text="{path:'bk>publishedDate',formatter:'.formatter.formatDate2'}"></Text>
+                        <Text text="{bk>gender}" />
+                        <Text text="{bk>ageGroup}" />
+                        <!-- <core:Icon src="{= ${bk>status}==='C'? 'sap-icon://accept' : (${bk>status}==='I'?'sap-icon://pending':'sap-icon://alert') }" /> -->
+                        <core:Icon src="{path:'bk>status',formatter:'.formatter.formatStatusIcon'}"
+                            color="{path:'bk>status',formatter:'.formatter.formatStatusColor'}"></core:Icon>
+
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+        <Table id="idChaptersTable" items="{ch>/}">
+        <headerToolbar>
+            <OverflowToolbar>
+                <content>
+                    <Title text="Chapters" level="H2" />
+                </content>
+            </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Text text="Title" />
+            </Column>
+            <Column>
+                <Text text="Pages" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{ch>title}" />
+                    <Text text="{ch>pages}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+    <core:Fragment fragmentName="bookscapmfreestyleui5.fragments.Footer" type="XML"/>
+    </Page>
+</mvc:View>

@@ -1,0 +1,37 @@
+<mvc:View
+    controllerName="bookscapmfreestyleui5.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"  xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page title="Welcome">
+        <!-- Header Links -->
+        <headerContent>
+            <Button text="Contact Us" type="Transparent" press="onContact"/>
+            <Button text="Login" type="Transparent" press="onLogin"/>
+            <Button text="Signup" type="Transparent" press="onSignup"/>
+        </headerContent>
+
+        <core:Fragment fragmentName="bookscapmfreestyleui5.fragments.Header" type="XML"/>
+
+        <!-- Main Content -->
+        <content>
+            <VBox
+                height="100%"
+                justifyContent="Center"
+                alignItems="Center"
+                class="sapUiLargeMargin">
+
+                <Title text="Welcome Guest 👋" level="H1"/>
+                <Text text="Explore as a guest" class="sapUiSmallMarginBottom"/>
+
+                <Button
+                    text="📚 Books Library"
+                    type="Emphasized"
+                    press="onBooksLibrary"
+                    width="15rem"/>
+            </VBox>
+
+         <core:Fragment fragmentName="bookscapmfreestyleui5.fragments.Header" type="XML"/>
+        </content>
+    </Page>
+</mvc:View>

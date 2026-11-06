@@ -1,0 +1,11 @@
+ID,title,author,price,publishedDate,gender,ageGroup,status
+550e8400-e29b-41d4-a716-446655440001,Harry Potter and the Sorcerers Stone,J.K. Rowling,19.99,1997-06-26T00:00:00Z,F,Kids,C
+550e8400-e29b-41d4-a716-446655440002,The Alchemist,Paulo Coelho,14.99,1988-01-01T00:00:00Z,M,Adult,I
+550e8400-e29b-41d4-a716-446655440003,Atomic Habits,James Clear,24.99,2018-10-16T00:00:00Z,F,Adult,C
+550e8400-e29b-41d4-a716-446655440004,The Cat in the Hat,Dr. Seuss,9.99,1957-03-12T00:00:00Z,M,Kids,C
+550e8400-e29b-41d4-a716-446655440005,The Hobbit,J.R.R. Tolkien,17.50,1937-09-21T00:00:00Z,F,Kids,I
+550e8400-e29b-41d4-a716-446655440006,Pride and Prejudice,Jane Austen,12.99,1813-01-28T00:00:00Z,F,Adult,C
+550e8400-e29b-41d4-a716-446655440007,The Jungle Book,Rudyard Kipling,8.99,1894-01-01T00:00:00Z,M,Kids,I
+550e8400-e29b-41d4-a716-446655440008,Rich Dad Poor Dad,Robert Kiyosaki,21.99,1997-04-01T00:00:00Z,M,Adult,I
+550e8400-e29b-41d4-a716-446655440009,Charlottes Web,E.B. White,16.99,1952-10-15T00:00:00Z,F,Kids,C
+550e8400-e29b-41d4-a716-446655440010,Deep Work,Cal Newport,22.50,2016-01-05T00:00:00Z,M,Adult,I

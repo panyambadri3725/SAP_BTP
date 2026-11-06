@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","bookscapmfreestyleui5/model/models"],(e,t)=>{"use strict";return e.extend("bookscapmfreestyleui5.Component",{metadata:{manifest:"json",interfaces:["sap.ui.core.IAsyncContentCreation"]},init(){e.prototype.init.apply(this,arguments);const i=sap.ui.core.routing.HashChanger.getInstance();if(window.location.hash!=="#"){i.replaceHash("")}this.setModel(t.createDeviceModel(),"device");this.getRouter().initialize()}})});
+//# sourceMappingURL=Component.js.map
